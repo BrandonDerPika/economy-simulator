@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pop Economy Simulator</title>
+
+<style>
+
+body{
+font-family:Arial;
+}
+
+.control-panel{
+margin-bottom:20px;
+padding:10px;
+border:1px solid #aaa;
+background:#f9f9f9;
+}
+
+.area{
+border:2px solid #333;
+padding:10px;
+margin-top:15px;
+}
+
+.summary{
+font-weight:bold;
+margin-bottom:5px;
+}
+
+.jobs{
+background:#fafafa;
+padding:5px;
+border:1px solid #ccc;
+margin-bottom:10px;
+}
+
+.pop-log{
+background:#f4f4f4;
+border:1px solid #ccc;
+padding:5px;
+margin-top:5px;
+max-height:180px;
+overflow-y:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Pop Economy Simulator</h1>
+
+<div class="control-panel">
+
+<h3>Spawn Pop</h3>
+
+Area
+<input id="spawnArea">
+<button onclick="spawnPopUI()">Spawn</button>
+
+<hr>
+
+<h3>Create Job</h3>
+
+Area
+<input id="jobArea">
+
+Job Name
+<input id="jobName">
+
+Skill
+<select id="jobSkill">
+<option value="farming">farming</option>
+<option value="mining">mining</option>
+<option value="strength">strength</option>
+</select>
+
+Slots
+<input type="number" id="jobSlots" value="1">
+
+<button onclick="createJobUI()">Create Job</button>
+
+<hr>
+
+<h3>Remove Jobs</h3>
+
+Area
+<input id="removeArea">
+
+Job Name
+<input id="removeJob">
+
+Slots
+<input type="number" id="removeSlots" value="1">
+
+<button onclick="removeJobUI()">Remove Jobs</button>
+
+</div>
+
+<div id="areas"></div>
+
+<script src="job.js"></script>
+<script src="area.js"></script>
+<script src="areaManager.js"></script>
+<script src="pop.js"></script>
+<script src="ui.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
